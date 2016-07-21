@@ -8,14 +8,15 @@ let Koa = require('koa'),
 
 let app = Koa();
 
+app.use(Serve('src'));
+app.use(Serve('node_modules'));
+
 app.use(function *(next){
   var start = new Date;
   yield next;
   var ms = new Date - start;
   this.set('X-Response-Time', ms + 'ms');
 });
-
-app.use(Serve('src'));
 
 app.use(function *(){
   this.body = Fs.readFileSync('index.html', 'utf-8');
