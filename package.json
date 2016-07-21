@@ -1,0 +1,25 @@
+{
+  "name": "3d",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/escusado/3d.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/escusado/3d/issues"
+  },
+  "homepage": "https://github.com/escusado/3d",
+  "dependencies": {
+    "koa": "^1.2.0",
+    "koa-serve": "^0.1.7",
+    "nano-widget": "^1.0.92",
+    "three": "^0.79.0"
+  }
+}
