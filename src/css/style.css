@@ -8,4 +8,5 @@ html, body, .wrapper, canvas {
 
 canvas{
   box-shadow: inset 0 0 0 5px red;
+  background: radial-gradient(ellipse farthest-corner at 50% 50% , #333333 0%, #000000 95%);
 }

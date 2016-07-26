@@ -5,7 +5,9 @@ class App extends NanoWidget {
     super(conf);
 
     //get the engine API
-    this.renderEngine = new ThreeEngine();
+    this.renderEngine = new ThreeEngine({
+      debugAxis : true
+    });
 
     //get rendereable DOMElement from egine (which is the THREEjs renderer El)
     this.element = this.renderEngine.element;
@@ -15,7 +17,17 @@ class App extends NanoWidget {
     this.size = {};
     this.children = [];
 
+    this.renderEngine.setup();
+
     this._bindEvents();
+
+    this.threeApp = new ThreeApp();
+
+    this.renderEngine.scene.add(this.threeApp.element);
+
+    this.renderEngine.camera.lookAt(this.renderEngine.scene.position);
+    
+    this._resize();
   }
 
   run () {
