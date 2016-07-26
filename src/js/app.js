@@ -21,12 +21,17 @@ class App extends NanoWidget {
 
     this._bindEvents();
 
-    this.threeApp = new ThreeApp();
+    this.threeApp = new ThreeApp({
+      renderEngine: this.renderEngine
+    });
+    this.threeApp.setup();
 
+    //render main container
     this.renderEngine.scene.add(this.threeApp.element);
 
+    //make camera look at origin by default
     this.renderEngine.camera.lookAt(this.renderEngine.scene.position);
-    
+
     this._resize();
   }
 
@@ -36,7 +41,7 @@ class App extends NanoWidget {
 
   _bindEvents () {
     window.addEventListener('resize', this._resize.bind(this));
-    this.renderEngine.bind('update', (ev) => Dispatcher.dispatch('update', ev.data));
+    this.renderEngine.bind('update', (ev) => Dispatcher.dispatch('update', ev));
   }
 
   _resize () {

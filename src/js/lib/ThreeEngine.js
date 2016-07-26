@@ -28,7 +28,7 @@ class ThreeEngine extends NanoCustomEventSupport {
 
     this.camera.position.z = 100;
     this.camera.position.y = 100;
-    this.camera.position.x = 100;
+    this.camera.position.x = 50;
   }
 
   resize (newSize) {
@@ -41,7 +41,7 @@ class ThreeEngine extends NanoCustomEventSupport {
     let now = new Date().getTime(),
         updateData = {
             now: now,
-            dt: now - (this.time || now)
+            delta: now - (this.time || now)
         };
 
     this.time = now;

@@ -28,9 +28,6 @@ class Triangle extends NanoThreejsWidget {
     this.object = new THREE.Mesh( this.geometry, triangleMaterial );
     this.object.position.set(0, 0, 0);
 
-    // this.object.position.z = -100;//move a bit back - size of 500 is a bit big
-    // this.object.rotation.y = -Math.PI * .5;//triangle is pointing in depth, rotate it -90 degrees on Y
-
     this.element.add(this.object);
   }
 }
