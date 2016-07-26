@@ -18,6 +18,10 @@ class NanoThreejsWidget extends includes(NanoCustomEventSupport, NanoNodeSupport
       this.element = this._getElement();
     }
 
+    this.element.position.x = 0;
+    this.element.position.y = 0;
+    this.element.position.z = 0;
+
   }
 
   _getElement () {

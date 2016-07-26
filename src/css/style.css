@@ -8,5 +8,20 @@ html, body, .wrapper, canvas {
 
 canvas{
   box-shadow: inset 0 0 0 5px red;
-  background: radial-gradient(ellipse farthest-corner at 50% 50% , #333333 0%, #000000 95%);
+  /*background: radial-gradient(ellipse farthest-corner at 50% 50% , #333333 0%, #000000 95%);*/
+}
+
+
+.wrapper	{
+  background-color: #8EC1DA;
+	background-image: url(bg-clouds.png);
+	background-position: 0 0;
+	background-repeat: repeat-x;
+
+	animation: animatedBackground 40s linear infinite;
+}
+
+@keyframes animatedBackground {
+	from { background-position: 0 bottom; }
+	to { background-position: 100% bottom; }
 }

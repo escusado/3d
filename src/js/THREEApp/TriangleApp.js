@@ -1,16 +1,15 @@
 'use strict'
 
-class ThreeApp extends NanoThreejsWidget {
+class TriangleApp extends NanoThreejsWidget {
+
+  //.renderEngine
+
   constructor (conf) {
     super(conf);
 
     this.triangle = new Triangle({
       size : 5
     });
-
-    this.triangle.element.position.x = 10;
-    this.triangle.element.position.y = 10;
-    this.triangle.element.position.z = 10;
 
     this.render(this.triangle.element);
   }
@@ -24,7 +23,6 @@ class ThreeApp extends NanoThreejsWidget {
   }
 
   _handleUpdate (ev) {
-    this.triangle.element.rotation.z += ev.data.delta * 0.01;
-    console.log('>>', this.triangle.element.rotation.z);
+    // this.triangle.element.rotation.x += ev.data.delta * 0.01;
   }
 }
