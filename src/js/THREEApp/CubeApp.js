@@ -1,17 +1,17 @@
 'use strict'
 
-class TriangleApp extends NanoThreejsWidget {
+class CubeApp extends NanoThreejsWidget {
 
   //.renderEngine
 
   constructor (conf) {
     super(conf);
 
-    this.triangle = new Triangle({
+    this.cube = new Cube({
       size : 25
     });
 
-    this.render(this.triangle.element);
+    this.render(this.cube.element);
   }
 
   setup () {
@@ -23,6 +23,6 @@ class TriangleApp extends NanoThreejsWidget {
   }
 
   _handleUpdate (ev) {
-    // this.triangle.element.rotation.x += ev.data.delta * 0.01;
+    // this.cube.element.rotation.x += ev.data.delta * 0.001;
   }
 }

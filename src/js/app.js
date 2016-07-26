@@ -22,6 +22,7 @@ class App extends NanoWidget {
     this._bindEvents();
 
     this.threeApp = new TriangleApp({
+    // this.threeApp = new CubeApp({
       renderEngine: this.renderEngine
     });
     this.threeApp.setup();
