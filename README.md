@@ -1,10 +1,14 @@
 # 3d
-![ThreeApp](http://i.imgur.com/2QxlXe5.gif)
+![ThreeApp](http://i.imgur.com/jleq1RJ.gif)
 
-https://github.com/escusado/nano-widget
+
 This repo is an experiment used as a demo for the talks @gdl_js. It proposes a Three.js app structure using [`NanoWidget`](https://github.com/escusado/nano-widget) implementation of the [`Widget`](https://github.com/azendal/neon) pattern.
 
+## Video
 https://youtu.be/MZQmJr0FmZs?t=1h9m39s
+
+##Slides
+https://docs.google.com/presentation/d/1bwAGiKeEwiZ82vfW7Bg5P9K5kQfDEWOa-xA_EmEYuYc/edit?usp=sharing
 
 # NanoWidget based THREEjs Framework
 
