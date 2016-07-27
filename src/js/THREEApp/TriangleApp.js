@@ -8,7 +8,13 @@ class TriangleApp extends NanoThreejsWidget {
     super(conf);
 
     this.triangle = new Triangle({
-      size : 25
+      size : 25,
+      position : {
+        x: 0,
+        y: 0,
+        z: 0
+      },
+      color: 0xFFFFFF
     });
 
     this.render(this.triangle.element);

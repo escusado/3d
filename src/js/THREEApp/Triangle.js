@@ -4,8 +4,6 @@ class Triangle extends NanoThreejsWidget {
   constructor (conf) {
     super(conf);
 
-    let triangleMaterial;
-
     this.geometry = new THREE.Geometry();
 
     this.vertex = [
@@ -20,13 +18,13 @@ class Triangle extends NanoThreejsWidget {
 
     this.geometry.faces.push( new THREE.Face3( 0, 1, 2 ) );
 
-    triangleMaterial = new THREE.MeshBasicMaterial({
-                         color:0xFFFFFF,
+    this.triangleMaterial = new THREE.MeshBasicMaterial({
+                         color:this.color,
                          side:THREE.DoubleSide
                      });
 
-    this.object = new THREE.Mesh( this.geometry, triangleMaterial );
-    this.object.position.set(0, 0, 0);
+    this.object = new THREE.Mesh( this.geometry, this.triangleMaterial );
+    this.object.position.set(this.position.x, this.position.y, this.position.z);
 
     this.element.add(this.object);
   }
