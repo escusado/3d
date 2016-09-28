@@ -12,7 +12,7 @@ class ThreeEngine extends NanoCustomEventSupport {
       antialias:true,
       alpha: true
     });
-    this.renderer.setClearColor(0x333333, 1);
+    // this.renderer.setClearColor(0x333333, 1);
     this.element = this.renderer.domElement;
   };
 

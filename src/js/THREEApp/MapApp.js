@@ -1,14 +1,14 @@
 'use strict'
 
-class CubeApp extends NanoThreejsWidget {
+class MapApp extends NanoThreejsWidget {
 
   //.renderEngine
 
   constructor (conf) {
     super(conf);
 
-    this.cube = new Cube({
-      size : 25
+    this.cube = new Map({
+      url : '/mesh-1.gltf'
     });
 
     this.render(this.cube.element);

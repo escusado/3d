@@ -14,7 +14,7 @@ class TriangleApp extends NanoThreejsWidget {
         y: 0,
         z: 0
       },
-      color: 0xFFFFFF
+      color: 0xFFFF00
     });
 
     this.render(this.triangle.element);
