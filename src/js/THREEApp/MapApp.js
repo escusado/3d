@@ -8,7 +8,7 @@ class MapApp extends NanoThreejsWidget {
     super(conf);
 
     this.cube = new Map({
-      url : '/mesh-1.gltf'
+      url : '/processing_simplified_3d_mesh.gltf'
     });
 
     this.render(this.cube.element);
@@ -23,7 +23,7 @@ class MapApp extends NanoThreejsWidget {
   }
 
   _handleUpdate (ev) {
-    this.cube.element.rotation.x += ev.data.delta * 0.001;
-    this.cube.element.rotation.y += ev.data.delta * 0.001;
+    // this.cube.element.rotation.x += ev.data.delta * 0.001;
+    // this.cube.element.rotation.y += ev.data.delta * 0.001;
   }
 }
